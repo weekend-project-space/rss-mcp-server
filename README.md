@@ -28,6 +28,22 @@ cp .env.example .env
 - `FEVER_PASSWORD`: Your Fever API password
 - `MCP_SERVER_NAME`: Name for your MCP server instance
 
+3. Configure Cursor Integration:
+
+Create or edit your Cursor MCP configuration file at `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "RssMcpServer": {
+      "url": "http://127.0.0.1:8000/sse"
+    }
+  }
+}
+```
+
+This configuration will allow Cursor to connect to your RSS MCP server running locally on port 8000.
+
 ## Running the Server
 
 Start the server using:

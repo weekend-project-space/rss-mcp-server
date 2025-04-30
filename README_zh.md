@@ -28,6 +28,22 @@ cp .env.example .env
 - `FEVER_PASSWORD`：你的 Fever API 密码
 - `MCP_SERVER_NAME`：你的 MCP 服务器实例名称
 
+3. 配置 cursor 集成：
+
+在`〜/.cursor/mcp.json`：创建或编辑 cursor MCP 配置文件：
+
+```json
+{
+  "mcpServers": {
+    "RssMcpServer": {
+      "url": "http://127.0.0.1:8000/sse"
+    }
+  }
+}
+```
+
+此配置将允许 cursor 连接到您在端口 8000 上本地运行的 RSS MCP 服务器。
+
 ## 运行服务器
 
 使用以下命令启动服务器：
